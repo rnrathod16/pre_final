@@ -68,15 +68,14 @@
 
     
     
+// require "nav.php";
     ?>
 
 
 
 
 
-
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar center navbar-expand-lg navbar-dark bg-dark">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -87,13 +86,16 @@
         <a class="nav-link" href="home.php">Requests <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="accounts.php">Accounts</a>
+        <a class="nav-link" href="accounts.php">Accepted</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="rejected.php">Rejected</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Messages.php">Messages</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Upload Files
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -105,16 +107,16 @@
     </ul>
   </div>
 </nav>
-</div>
 
-<pre>              </pre>
-<pre>              </pre>
 
-    <main role="main">
+
+    <main role="main my-5">
 
       <section class="text-center">
+
+      <div class="container my-4"><h2>Pending Request</h2></div>
     
-        <div class="container">
+        <div class="container my-5">
         <table id="myTable" class="table table-striped">
   <thead>
   <tr>
@@ -176,13 +178,13 @@
                   
                   
                 </tbody>
-              </table>';
+              </table>
 
 
-              <a href='https://www.symptoma.es/'>symptoma.es</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ec22b968fcf6a849f6938d64349b852f5aa1ed8'></script>
+              <!-- <a href='https://www.symptoma.es/'>symptoma.es</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=8ec22b968fcf6a849f6938d64349b852f5aa1ed8'></script>
 <script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/776611/t/6"></script>
 
-
+ -->
 
 
 

@@ -1,5 +1,8 @@
 
 
+
+
+
 <?php
     session_start(); //we need session for the log in thingy XD 
     require 'loginsystem/partials/dbconnect.php';
@@ -68,12 +71,12 @@
     <?php
 
 
-// require "nav.php";    
     
+    
+// require "nav.php";
+include "loginsystem/partials/dbconnect.php";
+
     ?>
-
-
-
 
 
 
@@ -91,7 +94,7 @@
         <a class="nav-link" href="accounts.php">Accepted</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="rejected.php">Rejected</a>
+        <a class="nav-link" href="#">Rejected</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="Messages.php">Messages</a>
@@ -109,36 +112,11 @@
     </ul>
   </div>
 </nav>
-
+</div>
 
 
 <div class="container my-5">
-<div class="container text-center my-4"><h2>Queries Of Users</h2></div>
-
-<?php
- 
- $servername = "localhost";
- $username = "root";
- $password = "";
- $database = "users";
-
- 
- $conn = mysqli_connect($servername, $username, $password, $database);
- 
- if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-   $firstname = $_POST['firstname'];
-   $lastname = $_POST['lastname'];
-   $username= $_POST['username'];
-   $password= $_POST['password'];
-   $pack = $_POST['pack'];
- $sql= "INSERT INTO `contact` (`name`, `email`, `message`, `date`) VALUES (`$name`, `$email`, `$message`, `$date`);";
- $result = mysqli_query($conn, $sql);
- if($result){
-   echo "record inserted";
- }
- }
- ?>
-
+<div class="container text-center my-4"><h2>Rejected Accounts</h2></div>
 
 
 
@@ -156,6 +134,7 @@
     
   </head>
   <body>
+  
 
 
  
@@ -163,17 +142,17 @@
   <thead>
     <tr>
       <th scope="col">srno</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Message</th>
-      <th scope="col">Date--Time</th>
+      <th scope="col">firstname</th>
+      <th scope="col">lastname</th>
+      <th scope="col">username</th>
+      <th scope="col">pack</th>
     </tr>
   </thead>
   <tbody>
   <?php
 
-  $sl="SELECT * FROM `contact`";
- $result=mysqli_query($conn,$sl);
+  $sl="SELECT * FROM `rejected`";
+ $result=mysqli_query($con,$sl);
  
    $row=mysqli_num_rows($result);
    echo "$row";
@@ -183,10 +162,10 @@
  
        echo "     <tr>
        <th scope='row'>$no</th>
-       <td>".$fetch['name']."</td>
-       <td>".$fetch['email']."</td>
-       <td>".$fetch['message']."</td>
-       <td>".$fetch['date']."</td>
+       <td>".$fetch['firstname']."</td>
+       <td>".$fetch['lastname']."</td>
+       <td>".$fetch['username']."</td>
+       <td>".$fetch['pack']."</td>
      </tr>";
       $no=$no+1;
      }

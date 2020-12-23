@@ -73,32 +73,33 @@
 
     
     
+// require "nav.php";
+
     ?>
 
 
 
-
-
-
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar center navbar-expand-lg navbar-dark bg-dark">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="home.php">Requests </a>
-      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="accounts.php">Accounts <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.php">Requests <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="Messages.php">Messages</a>
+        <a class="nav-link" href="accounts.php">Accepted</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="rejected.php">Rejected</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Messages.php">Messages</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Upload Files
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -112,12 +113,9 @@
 </nav>
 </div>
 
-<pre>              </pre>
-<pre>              </pre>
 
-
-
-<div class="container">
+<div class="container my-5">
+<div class="container text-center my-4"><h2>Accepted Accounts</h2></div>
 
 <?php
  
@@ -160,6 +158,7 @@
     
   </head>
   <body>
+  
 
 
  
